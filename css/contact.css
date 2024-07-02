@@ -1,0 +1,284 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+
+:root {
+    --primary-color: #e82574;
+    --primary-color-dark: #bc1c5c;
+    --text-dark: #0c0a09;
+    --text-light: #78716c;
+    --white: #ffffff;
+    --max-width: 1200px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.section1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: var(--text-light); /* Changed background to a light color */
+    position: relative;
+}
+
+.section1::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    background: #fff38e; /* Added a gradient effect */
+}
+
+.container1 {
+    position: relative;
+    width: 100%;
+    max-width: 1100px; /* Changed min-width to max-width for better responsiveness */
+    min-height: 550px;
+    display: flex;
+    z-index: 1000;
+    overflow: hidden; /* Added to contain the absolute positioned elements */
+}
+
+.container1 .contactInfo1 {
+    position: absolute;
+    top: 40px;
+    left: 0;
+    width: 350px;
+    height: calc(100% - 80px);
+    background: var(--primary-color);
+    z-index: 1;
+    padding: 40px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 20px 25px rgba(0,0,0,0.15);
+    border-radius: 22px;
+}
+
+.container1 .contactInfo1 h2 {
+    color: var(--white); /* Changed text color to white for better contrast */
+    font-size: 24px;
+    font-weight: 500;
+    margin-bottom: 20px; /* Added margin for spacing */
+}
+
+.container1 .contactInfo1 ul.info {
+    margin-top: 20px; /* Adjusted margin for spacing */
+}
+
+.container1 .contactInfo1 ul.info li {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px; /* Adjusted margin for spacing */
+}
+
+.container1 .contactInfo1 ul.info li span:nth-child(1) {
+    margin-right: 10px; /* Adjusted margin for spacing */
+}
+
+.container1 .contactInfo1 ul.info li span a {
+    color: var(--white);
+    text-decoration: none;
+}
+
+.container1 .contactInfo1 ul.info li span:nth-child(1) img {
+    max-width: 20px; /* Adjusted image size */
+    filter: invert(1);
+}
+
+.container1 .contactInfo1 ul.info li span:nth-child(2) {
+    color: var(--white);
+    font-weight: 300;
+}
+
+.container1 .contactForm1 {
+    position: relative;
+    padding: 70px 50px;
+    margin-left: 350px; /* Adjusted margin to accommodate sidebar */
+    width: calc(100% - 350px);
+    min-height: 100%;
+    background: var(--white); 
+    box-shadow: 0 50px 50px rgba(0,0,0,0.25);
+    border-radius: 22px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.container1 .contactForm1 h2 {
+    color: var(--primary-color);
+    font-size: 24px;
+    font-weight: 500;
+    margin-bottom: 20px; /* Added margin for spacing */
+}
+
+.container1 .contactForm1 .formBox1 {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 30px; /* Adjusted margin for spacing */
+}
+
+.container1 .contactForm1 .formBox1 .inputBox1 {
+    width: 100%;
+    margin-bottom: 35px;
+    position: relative;
+}
+
+.container1 .contactForm1 .formBox1 .inputBox1.w50 {
+    width: 47%;
+}
+
+.container1 .contactForm1 .formBox1 .inputBox1 input,
+.container1 .contactForm1 .formBox1 .inputBox1 textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    color: var(--text-dark);
+    border: none;
+    border-bottom: 1px solid #ccc;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.container1 .contactForm1 .formBox1 .inputBox1 input:focus,
+.container1 .contactForm1 .formBox1 .inputBox1 textarea:focus {
+    border-bottom-color: var(--primary-color);
+}
+
+.container1 .contactForm1 .formBox1 .inputBox1 textarea {
+    min-height: 120px;
+    resize: vertical; /* Allow textarea resizing */
+}
+
+.container1 .contactForm1 .formBox1 .inputBox1 span {
+    position: absolute;
+    left: 0;
+    bottom: 8px;
+    color: #777;
+    transition: all 0.3s ease;
+    pointer-events: none;
+}
+
+.container1 .contactForm1 .formBox1 .inputBox1 input:focus ~ span,
+.container1 .contactForm1 .formBox1 .inputBox1 input:valid ~ span,
+.container1 .contactForm1 .formBox1 .inputBox1 textarea:focus ~ span,
+.container1 .contactForm1 .formBox1 .inputBox1 textarea:valid ~ span {
+    transform: translateY(-20px);
+    font-size: 12px;
+    color: var(--primary-color);
+    font-weight: 500;
+}
+
+.container1 .contactForm1 .formBox1 .inputBox1 input[type="submit"] {
+    cursor: pointer;
+    background: var(--primary-color);
+    color: var(--white);
+    border: none;
+    border-radius: 20px;
+    padding: 12px 24px;
+    transition: background 0.3s;
+}
+
+.container1 .contactForm1 .formBox1 .inputBox1 input[type="submit"]:hover {
+    background: var(--primary-color-dark); /* Darker shade on hover */
+}
+
+@media (max-width: 1200px) {
+    .container1 {
+        flex-direction: column; /* Stack elements in smaller screens */
+        align-items: center;
+        padding: 20px;
+    }
+
+    .container1 .contactInfo1,
+    .container1 .contactForm1 {
+        position: static;
+        width: 100%;
+        max-width: none;
+        margin: 20px 0;
+        box-shadow: none;
+        border-radius: 0;
+    }
+
+    .section1::before {
+        display: none; /* Hide gradient background on smaller screens */
+    }
+}
+
+
+@media (max-width: 991px)
+{
+    .section1
+    {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        background: var(--primary-color);
+    }
+
+    .section1::before
+    {
+        display: none;
+    }
+
+    .container1
+    {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .container1 .contactForm1
+    {
+        width: 100%;
+        height: auto;
+        border-radius: 0px;
+    }
+
+    .container1 .contactInfo1
+    {
+        width: 100%;
+        height: auto;
+        flex-direction: row;
+        border-radius: 0px;
+    }
+    .container1 .contactInfo1 ul.sci
+    {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    }
+}
+
+@media (max-width: 600px)
+{
+    .container1 .contactForm1
+    {
+        padding: 25px;
+    }
+
+    .container1 .contactInfo1{
+        padding: 25px;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .container1 .contactInfo1 ul.sci
+    {
+        margin-top: 40px;
+    }
+
+    .container1 .contactForm1 .formBox1 .inputBox1.w50
+    {
+        width: 100%;
+    }
+}
