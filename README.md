@@ -5,7 +5,7 @@ This is a responsive website template for Kingsukh Guest House. It includes sect
 
 ## Demo
 You can view a live demo of the website:
-
+https://garvvirmani.github.io/Kingsukh-Guest-House/
 
 ## Features
 - Responsive design using CSS Flexbox and media queries
