@@ -316,4 +316,249 @@ nav {
 }
 
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  color: #333;
+  background: #f7f9fb;
+}
+
+header {
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6)),
+    url("../assets/out.jpg") center/cover no-repeat;
+  color: white;
+  min-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  position: sticky;
+  top: 0;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.logo a {
+  color: #fff;
+  font-weight: 600;
+  font-size: 1.3rem;
+  text-decoration: none;
+}
+
+.nav__links {
+  display: flex;
+  gap: 1.5rem;
+  list-style: none;
+}
+
+.nav__links a {
+  color: #fff;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.nav__links a:hover {
+  color: #ffb703;
+}
+
+.nav__menu__btn {
+  display: none;
+  font-size: 1.8rem;
+  cursor: pointer;
+  color: #fff;
+}
+
+.btn {
+  padding: 0.6rem 1.2rem;
+  background: #ffb703;
+  border: none;
+  border-radius: 25px;
+  color: #fff;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: #fb8500;
+}
+
+/* Header text */
+.header__container {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+.header__container p {
+  font-size: 1.2rem;
+}
+.header__container h1 {
+  font-size: 2.2rem;
+}
+.header__container span {
+  color: #ffb703;
+}
+
+/* Section styling */
+.section__container {
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+/* About */
+.about__container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 2rem;
+}
+.about__image img {
+  width: 100%;
+  border-radius: 15px;
+}
+
+/* Rooms */
+.room__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+.room__card {
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+.room__card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+.room__info {
+  padding: 1rem;
+}
+
+/* Services */
+.service__list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  list-style: none;
+  gap: 1rem;
+  text-align: left;
+}
+.service__list li {
+  background: #fff;
+  padding: 1rem;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Gallery */
+.gallery__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 10px;
+}
+.gallery__grid img {
+  width: 100%;
+  border-radius: 10px;
+  transition: transform 0.3s;
+}
+.gallery__grid img:hover {
+  transform: scale(1.05);
+}
+
+/* Contact */
+.contact {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+.contact__info {
+  flex: 1;
+  min-width: 250px;
+  text-align: left;
+}
+.contact__form {
+  flex: 1;
+  min-width: 250px;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.contact__form input,
+.contact__form textarea {
+  padding: 0.8rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  width: 100%;
+}
+
+/* Toast */
+.toast {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background: #06d6a0;
+  color: #fff;
+  padding: 1rem 1.5rem;
+  border-radius: 5px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.4s;
+  z-index: 9999;
+}
+
+.toast.show {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* Footer */
+.footer {
+  background: #000;
+  color: #fff;
+  text-align: center;
+  padding: 1.5rem 0;
+}
+
+/* Responsive Nav */
+@media (max-width: 768px) {
+  .nav__menu__btn {
+    display: block;
+  }
+
+  .nav__links {
+    position: absolute;
+    top: 70px;
+    right: -100%;
+    background: rgba(0, 0, 0, 0.9);
+    flex-direction: column;
+    width: 200px;
+    transition: 0.3s;
+    text-align: right;
+    padding: 1rem;
+  }
+
+  .nav__links.open {
+    right: 0;
+  }
+
+  .nav__links a {
+    display: block;
+    padding: 0.8rem 0;
+  }
+}
 
