@@ -13,27 +13,21 @@ navLinks.addEventListener("click", () => {
   menuBtnIcon.setAttribute("class", "ri-menu-line");
 });
 
-// Scroll Reveal Animations
+// Scroll Reveal
 const scrollRevealOption = {
   distance: "50px",
   origin: "bottom",
   duration: 1000,
 };
-ScrollReveal().reveal(".section__header, .section__subheader", {
-  ...scrollRevealOption,
-});
-ScrollReveal().reveal(".room__card, .service__list li, .gallery__grid img", {
-  ...scrollRevealOption,
-  interval: 200,
-});
+ScrollReveal().reveal(".section__header, .section__subheader", { ...scrollRevealOption });
+ScrollReveal().reveal(".room__card, .service__list li, .gallery__grid img", { ...scrollRevealOption, interval: 200 });
 
-// Contact Form Validation + Toast
+// Toast
 const contactForm = document.getElementById("contactForm");
 const toast = document.getElementById("toast");
 
 contactForm.addEventListener("submit", (e) => {
   e.preventDefault();
-
   const fname = document.getElementById("fname").value.trim();
   const email = document.getElementById("email").value.trim();
   const message = document.getElementById("message").value.trim();
