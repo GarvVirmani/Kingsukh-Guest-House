@@ -562,3 +562,113 @@ nav {
   }
 }
 
+
+
+/* ---------- NAVBAR ---------- */
+.navbar {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  background-color: #000; /* Adjust if your theme differs */
+  position: relative;
+  z-index: 1000;
+}
+
+/* Logo */
+.navbar .logo {
+  background: #ff4081; /* your pink color */
+  color: #fff;
+  font-weight: 700;
+  font-size: 20px;
+  padding: 10px 18px;
+  border-radius: 5px;
+  white-space: nowrap;
+}
+
+/* Book Now Button */
+.navbar .book-now {
+  background: #ffc107;
+  color: #000;
+  padding: 10px 20px;
+  font-weight: 700;
+  border-radius: 25px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.navbar .book-now:hover {
+  background: #ffcc33;
+}
+
+/* Nav Links */
+.nav-links {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.nav-links a:hover {
+  color: #ff4081;
+}
+
+/* Hamburger Menu */
+.menu-toggle {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+  color: #fff;
+}
+
+/* ---------- RESPONSIVE STYLES ---------- */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 15px 20px;
+  }
+
+  .menu-toggle {
+    display: block;
+    position: absolute;
+    right: 20px;
+    top: 18px;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background: #111;
+    padding: 10px 0;
+    margin-top: 15px;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .nav-links a {
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+  }
+
+  .navbar .book-now {
+    margin-top: 10px;
+    align-self: center;
+  }
+
+  .navbar .logo {
+    margin-bottom: 10px;
+  }
+}
+
+
