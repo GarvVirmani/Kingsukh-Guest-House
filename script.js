@@ -1,5 +1,5 @@
 const menuBtn = document.getElementById("menu-btn");
-const navLinks = document.getElementById("nav-links");
+var navLinks = document.getElementById("nav-links");
 const menuBtnIcon = menuBtn.querySelector("i");
 
 menuBtn.addEventListener("click", () => {
@@ -54,7 +54,6 @@ function showToast(msg, color) {
 }
 
   const toggle = document.querySelector('.menu-toggle');
-
   toggle.addEventListener('click', () => {
     navLinks.classList.toggle('active');
   });
