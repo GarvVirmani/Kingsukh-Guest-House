@@ -1,5 +1,6 @@
+// ===== MENU TOGGLE =====
 const menuBtn = document.getElementById("menu-btn");
-var navLinks = document.getElementById("nav-links");
+const navLinks = document.getElementById("nav-links");
 const menuBtnIcon = menuBtn.querySelector("i");
 
 menuBtn.addEventListener("click", () => {
@@ -8,26 +9,34 @@ menuBtn.addEventListener("click", () => {
   menuBtnIcon.setAttribute("class", isOpen ? "ri-close-line" : "ri-menu-line");
 });
 
+// Close menu when clicking a nav link
 navLinks.addEventListener("click", () => {
   navLinks.classList.remove("open");
   menuBtnIcon.setAttribute("class", "ri-menu-line");
 });
 
-// Scroll Reveal
+
+// ===== SCROLL REVEAL =====
 const scrollRevealOption = {
   distance: "50px",
   origin: "bottom",
   duration: 1000,
 };
-ScrollReveal().reveal(".section__header, .section__subheader", { ...scrollRevealOption });
-ScrollReveal().reveal(".room__card, .service__list li, .gallery__grid img", { ...scrollRevealOption, interval: 200 });
 
-// Toast
+ScrollReveal().reveal(".section__header, .section__subheader", { ...scrollRevealOption });
+ScrollReveal().reveal(".room__card, .service__list li, .gallery__grid img", { 
+  ...scrollRevealOption, 
+  interval: 200 
+});
+
+
+// ===== TOAST MESSAGE =====
 const contactForm = document.getElementById("contactForm");
 const toast = document.getElementById("toast");
 
 contactForm.addEventListener("submit", (e) => {
   e.preventDefault();
+
   const fname = document.getElementById("fname").value.trim();
   const email = document.getElementById("email").value.trim();
   const message = document.getElementById("message").value.trim();
@@ -52,8 +61,3 @@ function showToast(msg, color) {
   toast.classList.add("show");
   setTimeout(() => toast.classList.remove("show"), 3000);
 }
-
-  const toggle = document.querySelector('.menu-toggle');
-  toggle.addEventListener('click', () => {
-    navLinks.classList.toggle('active');
-  });
